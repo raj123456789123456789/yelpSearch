@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">YelpSearch</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="status_open">currently OPEN</string>
+    <string name="status_close">currently CLOSED</string>
+    <string name="require_location">Location is required to show nearby restaurants</string>
+    <string name="radius_selector">Radius Selector</string>
+</resources>

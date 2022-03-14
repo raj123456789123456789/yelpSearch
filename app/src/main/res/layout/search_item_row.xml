@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_marginTop="12dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgSearchItem"
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:id="@+id/tvRestaurantName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/imgSearchItem"
+                android:layout_marginStart="10dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginEnd="8dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_toStartOf="@+id/cvRating"/>
+            <TextView
+                android:id="@+id/tvRestaurantAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/imgSearchItem"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/black"
+                android:layout_below="@+id/tvRestaurantName"
+                android:textSize="15sp"
+                />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/imgSearchItem"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/black"
+                android:layout_below="@+id/tvRestaurantAddress"
+                android:layout_marginTop="10dp"
+                android:textSize="17sp"
+                />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvRating"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:cardBackgroundColor="@android:color/holo_red_light"
+                android:layout_alignParentEnd="true"
+                app:cardCornerRadius="40dp"
+                android:layout_marginEnd="10dp"
+                app:cardElevation="0dp">
+
+                <TextView
+                    android:id="@+id/tvRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"
+                    android:layout_gravity="center"
+                    />
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

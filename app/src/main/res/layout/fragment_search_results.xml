@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    android:id="@+id/pageRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_alignParentStart="true"
+        android:layout_marginHorizontal="16dp"
+        android:text="@string/radius_selector"
+        android:layout_marginTop="15dp"
+        />
+    <TextView
+        android:id="@+id/selectedDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginHorizontal="16dp"
+        android:textAllCaps="true"/>
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/distanceSlider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:min="100"
+        android:max="5000"
+        android:layout_below="@+id/selectedDistance"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="16dp"/>
+
+    <TextView
+        android:id="@+id/tvStartingDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/distanceSlider"
+        android:layout_alignParentStart="true"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="10dp"
+        android:text="100 M"/>
+
+    <TextView
+        android:id="@+id/tvEndingDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/distanceSlider"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="10dp"
+        android:text="5 KM"/>
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/tvStartingDistance"
+    tools:context=".ui.SearchResultsFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:paddingBottom="24dp"
+        android:layout_marginHorizontal="16dp"
+        tools:listitem="@layout/search_item_row"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+</FrameLayout>
+    <ProgressBar
+        android:id="@+id/lodMoreProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+</RelativeLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
